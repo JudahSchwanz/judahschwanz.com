@@ -10,33 +10,52 @@
         margin-left: auto;
         margin-right: auto;
       }
+      .tab {
+        display: inline-block;
+        width: 10px; /* Adjust the width as needed */
+      }
+      .tabsocials {
+        display: inline-block;
+        width: 45px; /* Adjust the width as needed */
+      }
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .header-left {
+        text-align: left;
+      }
+      .header-center {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+      }
     </style>
   </head>
   <body>
-    <header>
-      <h1>Judah Schwanz</h1>
-    </header>
-    <main>
-      <div class="row">
-        <div class="”post-text-box”">
-          <h1>Newest Post</h1>
-          <section>
-            <h2>First Post</h2>
-            <h3>About Me</h3>
-            <p>The first post’s content</p>
-            <p>About the author</p>
-          </section>
+    <div class="row">
+      <div class="post-text-box">
+        <div class="header-container">
+          <div class="header-left">
+            <h1><span class="tabsocials"> </span>Socials</h1>
+          </div>
+          <div class="header-center">
+            <h1>Judah Schwanz</h1>
+          </div>
         </div>
-        <div
-          style="display: flex; justify-content: center; align-items: center"
-        ></div>
+        <main>
+          <a href="https://x.com/buddhathejudah">Twitter</a>
+          <span class="tab"></span>
+          <a href="https://bsky.app/profile/buddhathejudah.bsky.social"
+            >BlueSky
+          </a>
+          <span class="tab"></span>
+          <a href="https://www.instagram.com/buddhathejudah/">Instagram</a>
+          <img src="images/pfp.jpeg" alt="Me" style="width: 20%" />
+        </main>
       </div>
-    </main>
-    <footer>
-      <a href="https://x.com/buddhathejudah">Twitter</a>
-      <a href="https://bsky.app/profile/buddhathejudah.bsky.social">BlueSky </a>
-      <a href="https://www.instagram.com/buddhathejudah/">Instagram</a>
-    </footer>
-    <img src="images/pfp.jpeg" alt="Me" style="width: 100%" />
+    </div>
   </body>
 </html>
