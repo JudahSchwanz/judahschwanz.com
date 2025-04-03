@@ -9,7 +9,7 @@ nav {
 }
 /*navigation bar button style*/
 nav a {
-   color: #000000;
+   color:rgb(34, 103, 192);
    text-decoration: none;
    font-size: larger;
 }
