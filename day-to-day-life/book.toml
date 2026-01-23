@@ -1,7 +1,0 @@
-[book]
-title = "Daily Shenanigans"
-authors = ["Judah Schwanz"]
-language = "en"
-
-[build]
-build-dir = "../day-to-day-life"
