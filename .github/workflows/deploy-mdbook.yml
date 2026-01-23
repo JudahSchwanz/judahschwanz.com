@@ -1,0 +1,32 @@
+name: Deploy mdBook
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'day-to-day-life/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Install mdBook
+        run: |
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+          $HOME/.cargo/bin/cargo install mdbook
+      
+      - name: Build mdBook
+        run: |
+          cd day-to-day-life
+          $HOME/.cargo/bin/mdbook build
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add day-to-day-life/
+          git commit -m "Build mdBook site" || true
+          git push
